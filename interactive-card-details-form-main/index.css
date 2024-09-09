@@ -1,0 +1,296 @@
+:root{--debug:1px solid red}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+height: 100vh;
+align-items: center;
+/* stify-content: center;ju */
+position: relative;
+display: flex;
+font-size: 10px;
+}
+.bg-main-desktop{
+    position: absolute;
+    height: 100%;
+    width: 40%;
+}
+.bg-main-mobile{
+    display: none;
+
+}
+.container{
+    position: relative;
+    max-width: 1440px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    height: 800px;
+}
+.card_display{
+    position: relative;
+    flex: 0 2 600px;
+    flex: 1 0 auto;
+    color: hsl(0, 0, 100%);
+}
+.card_details{
+    position: relative;
+    flex: 0 1 45%;
+}
+.front_card,.back_card{
+    position: absolute;
+    width: fit-content;
+}
+.bg-card-front,.bg-back_card{
+    border-radius: 12px;
+    
+}
+.front_card{
+    left: 240px;
+    top: 140px;
+}
+.back_card{
+    left: 350px;
+    bottom: 120px;
+}
+.card-logo,#number,#card_name,#month,#year,#divider-display{
+    position: absolute;
+    font-weight: 100;
+    padding: 20px o;
+
+}
+#divider-display{
+    bottom: 30px;
+    right: 30px;
+    font-size: 0.9rem;
+}
+.card-logo{
+    position: absolute;
+    top: 30px;
+  left: 30px;
+  z-index: 3;
+}
+#number{
+    bottom: 80px;
+    left: 30px;
+    letter-spacing: 2px;
+    color: white;
+    font-size: 25px;
+}
+#card_name{
+    bottom: 30px;
+    left: 30px;
+    font-size: 15px;
+    color: white;
+    text-transform: uppercase;
+}
+#month{
+    bottom: 30px;
+    right:80px;
+    font-size: 0.9rem;
+    color: hsl(270, 3%, 87%);
+    letter-spacing: 1px;
+    font-weight: 100;
+    padding: 0 20px;
+}
+#year{
+    bottom: 30px;
+    right:80px;
+    font-size: 0.9rem;
+    color: white;
+    letter-spacing: 1px;
+}
+#cvc{
+    font-size: 25px;
+    bottom: 115px;
+    right: 60px;
+    color: hsl(270, 3%, 87%);
+    position: absolute;
+}
+#myform{
+    height: 350px;
+    align-items: center;
+    justify-content: center;
+    width: 350px;
+
+}
+
+input:focus{
+    outline: 0px solid hsl(249, 99%, 64%);
+    border-top-color: hsl(249, 99%, 64%);
+    border-bottom-color: hsl(278, 94%, 30%);
+    border-right-color: hsl(249, 99%, 64%);
+    border-top-color: hsl(249, 99%, 64%);
+ 
+}
+label{
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    letter-spacing: 2px;
+}
+label .cardholder_number,label .expiry,label .cvcholder{
+    margin-top:9px;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+input.cvcholder{
+    font-size: 20px;
+    font-weight: 20px;
+    right: 20px;
+    width: 50px;
+    
+}
+input::placeholder{
+    font-weight: 200px;
+    color:hsl(270, 3%, 87%);
+    font: 20px;
+}
+#errmsg,#expiryerr,#cvcerror
+{
+    color: white;
+    font-size: 12ps;
+    font-weight: 500px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+.flex{
+    display: flex;
+    margin-bottom: 5px;
+    gap: 10px;
+}
+.flex .cvcholder{
+width: 50%;
+margin-right:20px;
+margin-left: 1px;
+font-weight: 200px;
+border-color:hsl(270, 3%, 87%);
+height: 30px;
+margin-top: 10%;
+text-align: center;
+justify-content: center;
+
+}
+.flex.cvc{
+    font-size: 20px;
+    left: 20px;
+    text-align: center;
+    justify-content: center;
+}
+
+.hidden{
+    display: none;
+    font-size: 10px;
+    margin-top: 10px;
+}
+.flex .expiry{
+width: 50%;
+margin-right: 5px;
+font-weight: 200px;
+border-color:hsl(270, 3%, 87%);
+
+
+}
+input.expiry,input.cvc,input .cardholder_name,input.cardholder_number{
+    margin-top: 4px;
+    font-size: 20px;
+}
+.card_details{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.expiry_date{
+    font-size: 15px;
+    text-transform: uppercase;
+    margin-top: 14px;
+}
+.cardholder_name{
+    font-size: 20px;
+    border-color: hsl(270, 3%, 87%);
+}
+.cvc{
+    margin-top: 15px;
+    text-transform: uppercase;
+}
+.cardnumber{
+text-transform:uppercase;
+border-color:hsl(270, 3%, 87%);
+}
+.cardname{
+    text-transform:uppercase;  
+    margin-top: 80px;
+}
+button{
+    all: unset;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 80%;
+    color: white;
+    background-color:  hsl(278, 68%, 11%);
+    font-size: 15px;
+    padding: 10px 0;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in;
+}
+button:hover{
+    background-color:  hsl(278, 68%, 11%,0.8);
+}
+@media  screen and (max-width:1024px) {
+    
+    body{
+        flex-direction: column;
+    }
+    .container{
+        flex-direction: column;
+    }
+    .bg-main-mobile{
+        display: none;
+    }
+    
+.bg-main-desktop{
+    position: absolute;
+    display: block;
+    height: 300px;
+    width: 100%;   
+
+}
+.back_card{
+    top: 0px;left: 300px;
+}
+.front-card{
+    top: 100px;
+    z-index: 5;
+}
+.bg-card-front,.bg-back_card{max-width: 400px;width:100%;}
+/* .cvcholder{
+    top: 10px;
+    bottom: 500px;
+    right:100px; */
+
+}
+.card_details{
+    position: relative;
+    flex:0 1 50%;
+}
+
+@media screen and (max-width:425px) {
+
+    
+    .bg-main-mobile{
+        height:250px; 
+
+    }
+    .bg-card-front,.bg-back_card{max-width: 400px;}
+    .back_card{left:100%}
+    .front-card{top: 100%; left: 30px;}
+    .cardholder_number{font-size: 14px;bottom: 60px;letter-spacing: 4px;}
+    .cardholder_name{
+        font-size: 12px;
+    }
+}

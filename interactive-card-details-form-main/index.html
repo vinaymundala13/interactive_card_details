@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>interactive card</title>
+  <link rel="stylesheet" href="index.css">
+
+</head>
+<body>
+  <img src="./images/bg-main-desktop.png" alt="" class="bg-main-desktop">
+  <img src="./images/bg-main-mobile.png" alt="" class="bg-main-mobile">
+  <div class="container">
+  <section class="card_display">
+    <div class="front_card">
+      <img src="./images/bg-card-front.png" alt="" class="bg-card-front">
+      <img src="./images/card-logo.svg" alt="" class="card-logo">
+      <h1 id="number">0000 0000 0000 0000</h1>
+      <p id="card_name">e.g JANE APPLESSED</p>
+      <p id="month">00/</p>
+      <p class="divider-display"></p>
+      <p id="year">00</p>
+    </div>
+    <div class="back_card">
+      <img src="./images/bg-card-back.png" alt="" class="bg-back_card">
+      <p id="cvc">000</p>
+    </div>
+  </section>
+  <section cass="card_details">
+    <form action="/action_page.ph" id="myform" name="myform">
+      <label for="cardholder_name" class="cardname">cardholder name</label> 
+      <input id="cardholder_name"
+      type="text"
+      class="cardholder_name"
+      name="cardholder_name"
+      placeholder="inay"
+      oninput="inputName()"
+      required>
+      <p id="errmsg"></p><br>
+      <label for="cardholder_number" class="cardnumber">cardholder number</label>  
+      <input id="cardholder_number"
+      type="text"
+      class="cardholder_number"
+      name="cardholder_number"  
+      placeholder="e.g 1234 1234 1234 1223"
+      oninput="inputCardNumber()"
+      required>
+      <p id="errnummsg"></p>
+      <div class="flex">
+        <label for="expiry_date" class="expiry_date">Exp .Date(MM/YY)<br />
+        <input class="expiry" type="text" placeholder="MM"
+        oninput="inputMM()"
+        required>
+        <input class="expiry" type="text" placeholder="YYYY"
+        oninput="inputYY()"
+        required>
+        <P id="expiryerr"></P>
+        </label>
+        <label for="cvc" class="cvc"> CVC</label>
+        <br/><br>
+        <input type="text" class="cvcholder" placeholder="e.g 121" oninput="inputCvc()" required> 
+        <p id="cvcerror"></p>
+      </div>
+        <div>
+          <button id="submit"> Conform</button>
+        </div>
+    </form>
+    <div id="thank-you" class="thank-you hodden">
+    <img src="./images/icon-complete.svg" alt="">
+    <h2 id="thnak-you-header">Thank You</h2>
+    <p><h3>we've added your card details</h3></p>
+    <button id="continue">continue</button>
+    </div>
+  </section>
+
+</div> 
+<script src="script.js"></script>
+</body>
+</html>
